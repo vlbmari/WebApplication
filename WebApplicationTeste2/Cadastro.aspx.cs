@@ -13,7 +13,7 @@ namespace WebApplicationTeste2
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server=DESKTOP-560L90G;Database=Teste2;User ID = sa; Password=07092002;Trusted_Connection=False";
+            string connectionString = "Server=DESKTOP-560L90G;Database=Teste2;User ID = sa; Password=123;Trusted_Connection=False";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

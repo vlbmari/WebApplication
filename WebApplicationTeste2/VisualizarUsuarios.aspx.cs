@@ -8,7 +8,7 @@ namespace WebApplicationTeste2
 {
     public partial class VisualizarUsuarios : System.Web.UI.Page
     {
-        private string connectionString = "Server=DESKTOP-560L90G;Database=Teste2;User ID = sa; Password=07092002;Trusted_Connection=False";
+        private string connectionString = "Server=DESKTOP-560L90G;Database=Teste2;User ID = sa; Password=123;Trusted_Connection=False";
 
         protected void Page_Load(object sender, EventArgs e)
         {
