@@ -27,11 +27,15 @@
             <br><br>
             <asp:Label ID="lblPasswordC" runat="server" Text="Password"></asp:Label>
             <br>
-            <asp:TextBox ID="txtPasswordC" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtPasswordC" runat="server" TextMode="Password"></asp:TextBox> 
             <br>
-            <asp:Label ID="lblConfirmPassword" runat="server" Text="Cinfirm Password"></asp:Label>
+            <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password"></asp:Label> 
             <br>
-            <asp:TextBox ID="txtConfirmPassword" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox> 
+            <br><br>
+            <asp:DropDownList ID="ddlCidades" runat="server" DataTextField="nome" DataValueField="pk_cidade" AppendDataBoundItems="true">
+                <asp:ListItem Text="Selecione uma cidade" Value="0"></asp:ListItem>
+            </asp:DropDownList>
             <br><br>
             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" style="height: 26px" />
             <br><br>
