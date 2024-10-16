@@ -14,6 +14,7 @@ namespace WebApplicationTeste2
             {
                 CarregarCidades();
             }
+            string valorCidade = ddlCidades.SelectedValue;
         }
 
         private void CarregarCidades()
@@ -53,8 +54,9 @@ namespace WebApplicationTeste2
                 string password = txtPasswordC.Text;
                 string confirmPass = txtConfirmPassword.Text;
                 int cidadeId = Convert.ToInt32(ddlCidades.SelectedValue);
+                // int UFid = Convert.ToInt32(Request.Form["ddlUF"]);
 
-                
+
                 if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(mail) ||
                     string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPass) || cidadeId == 0)
                 {
@@ -92,5 +94,6 @@ namespace WebApplicationTeste2
             }
         }
 
+        
     }
 }

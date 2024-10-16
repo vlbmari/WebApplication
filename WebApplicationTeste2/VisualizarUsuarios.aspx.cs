@@ -36,18 +36,21 @@ namespace WebApplicationTeste2
 
         protected void GridViewUsuarios_RowEditing(object sender, GridViewEditEventArgs e)
         {
+            //Edita
             GridViewUsuarios.EditIndex = e.NewEditIndex;
             CarregarUsuarios();
         }
 
         protected void GridViewUsuarios_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
+            //Cancela 
             GridViewUsuarios.EditIndex = -1;
             CarregarUsuarios();
         }
 
         protected void GridViewUsuarios_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            //Atualiza Usuarios
             GridViewRow row = GridViewUsuarios.Rows[e.RowIndex];
             int id = Convert.ToInt32(GridViewUsuarios.DataKeys[e.RowIndex].Value);
             string nome = ((TextBox)(row.Cells[1].Controls[0])).Text;
@@ -57,7 +60,6 @@ namespace WebApplicationTeste2
 
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
-                
                 string query = "UPDATE tbl_cadastro SET name=@Name, lastname=@Lastname, mail=@Mail, password=@Password WHERE id=@Id";
                 using (SqlCommand comando = new SqlCommand(query, conexao))
                 {
@@ -93,5 +95,21 @@ namespace WebApplicationTeste2
 
             CarregarUsuarios();
         }
+
+
+        protected void GridViewUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            //Seleciona usuario do GridView por id e redimenciona
+            if (e.CommandName == "SelecionarUser")
+            {
+
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                int userId = Convert.ToInt32(GridViewUsuarios.DataKeys[index].Value);
+
+                Response.Redirect("ditarUsuario.aspx?userId=" + userId);
+            }
+        }
+
     }
 }

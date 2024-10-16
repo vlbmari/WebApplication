@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EditarUsuario.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\cancel.png" />
     <Content Include="Images\delete.png" />
@@ -78,6 +79,13 @@
     <Content Include="Cadastro.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditarUsuario.aspx.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarUsuario.aspx.designer.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

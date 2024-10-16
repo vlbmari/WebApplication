@@ -17,13 +17,14 @@
             OnRowCancelingEdit="GridViewUsuarios_RowCancelingEdit"
             OnRowUpdating="GridViewUsuarios_RowUpdating"
             OnRowDeleting="GridViewUsuarios_RowDeleting"
+            OnRowCommand="GridViewUsuarios_RowCommand"
             DataKeyNames="id" >
         <Columns>
         <asp:BoundField DataField="id" HeaderText="ID" ReadOnly="True" />
         <asp:BoundField DataField="name" HeaderText="Nome" />
         <asp:BoundField DataField="lastname" HeaderText="Sobrenome" />
         <asp:BoundField DataField="mail" HeaderText="Email" />
-        <asp:BoundField DataField="password" HeaderText="Senha" />
+        <asp:ButtonField ButtonType="Link" Text="Selecionar" CommandName="SelecionarUser" />
         <asp:TemplateField>
             <ItemTemplate>
                 <asp:ImageButton ImageUrl="~/Images/edit.png" runat="server" CommandName="Edit" ToolTip="Edit" Width="20px" Height="20px" />

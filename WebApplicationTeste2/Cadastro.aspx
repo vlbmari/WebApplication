@@ -33,8 +33,7 @@
             <br>
             <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox> 
             <br><br>
-            <asp:DropDownList ID="ddlCidades" runat="server" DataTextField="nome" DataValueField="pk_cidade" AppendDataBoundItems="true">
-                <asp:ListItem Text="Selecione uma cidade" Value="0"></asp:ListItem>
+            <asp:DropDownList ID="ddlCidades" runat="server" DataTextField="nome" DataValueField="pk_cidade" AppendDataBoundItems="true" AutoPostBack="true" OnSelectedIndexChanged="ddlCidades_SelectedIndexChanged" >
             </asp:DropDownList>
             <br><br>
             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" style="height: 26px" />
@@ -42,6 +41,12 @@
             <asp:HyperLink ID="Login" runat="server" NavigateUrl="Login.aspx" Text="Entrar" />          
             <br><br>
             <asp:Label ID="lblMessageC" runat="server" Text=""></asp:Label>
+
+            <%--<select name="ddlUF" id="ddlUF">
+	        <option value="0">Selecione uma UF</option>
+	        <option value="1">BA</option>
+	        <option value="2">RN</option>
+            </select>--%>
 
         </div>
         
